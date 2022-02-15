@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flower power!</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="images/flower-icon.png" />
+    <link rel="stylesheet" type="text/css" href="vendor/normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <script src="scripts\main.js"></script>    
+</head>
+
+<body class="content">
+    <header class="header header-fixed header-search primary-color-bg">
+        <nav class="navigation container">
+            <div class="menu">
+                <a href="index.html" class="link link-active menu-item">Home</a>
+                <a href="order.html" class="link menu-item">Order</a>
+                <a href="index.html" class="link">
+                    <img class="scaled-image scaled-image-fixed" src="images/logo.svg" alt="Company logo">
+                </a>
+                <a href="#" class="link menu-item">Contact us</a>
+                <a href="#" class="link menu-item cart-menu">
+                    <img src="images/cart-icon.svg" alt="Cart icon">
+                    <div class="cart-menu-status">
+                        <div class="numInCart" id="cart-items">0</div>
+                        <div>items</div>
+                    </div>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="section secondary-color-bg">
+            <div class="table-of-items Cart">
+                
+            </div>
+        </section>  
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="menu menu-distributed">
+                <div class="infobox infobox-marginless infobox-copyright">
+                    <h4 class="infobox-title infobox-title-secondary-color main-color-emphasized">
+                        Copy this as much as you like
+                    </h4>
+                </div>
+                <div class="infobox infobox-marginless infobox-flower">
+                    <h4 class="infobox-title infobox-title-secondary-color main-color-emphasized">
+                        Flower power
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<template class="tableRow">
+    <tr>
+        <th id="name"></th>
+        <th id="price"></th>
+        <th id="quantity"></th>
+      </tr>
+</template>
+<script>
+    
+    let getData = async function () {
+        let response = await fetch("https://wimlab2.azurewebsites.net/products");
+        let data = await response.json();
+        addCategories(data);
+    }
+
+    Object.keys(localStorage).forEach(function(key){
+        console.log(key);
+        console.log(localStorage.getItem(key));
+    });
+    
+</script>
+
+</html>

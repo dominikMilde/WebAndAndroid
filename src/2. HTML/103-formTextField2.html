@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="hr">
+   <body>
+      <form action="/processForm.php">
+        Skriveno polje: <input type="text" name="sessionID" value="skriveno" hidden><br>
+        Samo čitanje: <input type="text" name="serverID" value="readonly" readonly><br>
+        Validirani unos: <input type="text" name="tel" pattern="\d{1,4}[A-Z]\d?"><br>
+        E-mail: <input type="text" name="email" required maxlength="30"><br>
+      </form>
+ </body>
+</html>

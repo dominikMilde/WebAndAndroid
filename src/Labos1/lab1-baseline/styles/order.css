@@ -1,0 +1,45 @@
+.photo-all {
+    text-align: center;
+  }
+  
+  .photo-title {
+    font-size: 1.4em;
+    margin: 0em;
+  }
+  
+  .photo {
+    width: 200px;
+    height: 200px;
+    background-color: #eec8c8;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+  }
+  
+  .tulips {
+    background-image: url(../images/tulip.jpg);
+  }
+  
+  .fuchsia {
+    background-image: url(../images/fuchsia.jpg);
+  }
+  
+  .lavender {
+    background-image: url(../images/lavender.jpg);
+  }
+  
+  .rake {
+    background-image: url(../images/rake.jpg);
+  }
+  
+  .shovel {
+    background-image: url(../images/shovel.jpg);
+  }
+  
+  .gallery {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 1em;
+  }

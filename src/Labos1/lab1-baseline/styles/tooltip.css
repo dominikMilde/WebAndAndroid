@@ -1,0 +1,28 @@
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    position: absolute;
+    bottom: 100%;    /* da se moze koristiti i na slikama */
+    right: 0;
+    z-index: 1;
+    margin: 0;
+    font-weight: normal;
+    font-style: normal;
+    font-family: "Roboto";
+    font-size: 15px;
+    width: auto;
+    background-color: white;
+    color: #ab4f8b;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid #ab4f8b;
+    padding: 0.20em 0.35em 0.20em 0.35em;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
